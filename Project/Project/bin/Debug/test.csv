@@ -1,0 +1,20 @@
+Id,Name,Surname,Age,IdentificationNo,Department,Location,Phone,Gender,BloodGroup,Birthdate,Startingdate,Wage
+1,Cemalettin,Coşgun    ,22,3232        ,Software            ,izmir                                             ,3333                ,MALE      ,A+        ,,,12,1
+5,SDF       ,SDF       ,24,12354       ,Technician          ,ASD                                               ,SDF                 ,FEMALE    ,AB-       ,,,5343
+6,cemalettin,coşgun    ,24,51832091728 ,IT                  ,Istanbul                                          ,555                 ,MALE      ,A+        ,,,12,1
+8,asd       ,asd       ,34,234         ,Technician          ,dsf                                               ,sdf                 ,FEMALE    ,B+        ,15.03.2024 00:00:00,8.03.2024 00:00:00,4353
+21,ads       ,ad        ,27,d           ,Technician
+        ,asd                                               ,1                   ,asd       ,A+        ,10.03.2024 00:00:00,3.03.2024 00:00:00,432,1
+22,elif      ,erdoğ     ,23,ad          ,Software            ,asd                                               ,asd                 ,FEMALE    ,0+        ,27.03.2024 00:00:00,19.03.2024 00:00:00,6000000
+24,asd       ,asd       ,54,asd         ,Finance
+           ,asd                                               ,4                   ,MALE      ,A+        ,19.03.2024 00:00:00,19.03.2024 00:00:00,34000
+26,asd       ,asd       ,29,asd         ,HR
+                ,asd                                               ,asd                 ,MALE      ,AB+       ,26.04.2025 00:00:00,15.07.2025 00:00:00,4435
+28,asd       ,asd       ,34,234         ,Production          ,asd                                               ,ad                  ,MALE      ,B-        ,10.03.2024 00:00:00,29.11.2024 00:00:00,56735
+30,asd       ,asd       ,34,234         ,Management          ,asd                                               ,ad                  ,FEMALE    ,B-        ,10.03.2024 00:00:00,29.11.2024 00:00:00,90000
+31,kerem     ,özlü      ,25,135465      ,IT                  ,muğla                                             ,05326455            ,MALE      ,A-        ,15.02.2024 00:00:00,9.03.2024 00:00:00,50000
+33,melih     ,gül       ,26,12313216    ,IT                  ,izmir                                             ,+90553542954        ,MALE      ,AB+       ,24.11.1998 00:00:00,4.04.2024 00:00:00,250000
+34,ewr       ,wer       ,2,32423       ,IT                  ,asd                                               ,asd                 ,MALE      ,A+        ,14.06.2019 00:00:00,20.08.2022 00:00:00,334
+36,eren      ,kalmış    ,24,32156451    ,Department          ,İzmir                                             ,05555555555         ,MALE      ,B+        ,22.04.2024 00:00:00,22.04.2024 00:00:00,40000
+37,asd       ,asd       ,37,123         ,Finance             ,izmir                                             ,05555555555         ,MALE      ,B+        ,9.01.2020 00:00:00,23.11.2024 00:00:00,30000
+39,a         ,a         ,32,23          ,HR                  ,df                                                ,234                 ,FEMALE    ,A+        ,8.05.2024 00:00:00,8.05.2024 00:00:00,234234

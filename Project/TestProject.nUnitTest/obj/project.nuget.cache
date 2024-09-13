@@ -1,0 +1,69 @@
+{
+  "version": 2,
+  "dgSpecHash": "lSFimU+QvC3NFbZj+V27YibDIIVRhSCmFhha8kZnYtF5+AiSw7kaf2XLg2344SPkil3hStxjGGJeWiodkKsybA==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Cemalettin\\Desktop\\Csharp\\MezuniyetProjesi\\Project\\TestProject.nUnitTest\\TestProject.nUnitTest.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Cemalettin\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
+    "C:\\Users\\Cemalettin\\.nuget\\packages\\microsoft.net.test.sdk\\17.8.0\\microsoft.net.test.sdk.17.8.0.nupkg.sha512",
+    "C:\\Users\\Cemalettin\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.8.0\\microsoft.testplatform.objectmodel.17.8.0.nupkg.sha512",
+    "C:\\Users\\Cemalettin\\.nuget\\packages\\microsoft.testplatform.testhost\\17.8.0\\microsoft.testplatform.testhost.17.8.0.nupkg.sha512",
+    "C:\\Users\\Cemalettin\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "'net8.0' için 'NUnit.Analyzers (>= 3.9.0)' çözümlenemiyor. PackageSourceMapping etkinleştirildi, şu kaynak(lar) değerlendirilmedi: Microsoft Visual Studio Offline Packages, nuget.org.",
+      "libraryId": "NUnit.Analyzers",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "'net8.0' için 'NUnit (>= 3.14.0)' çözümlenemiyor. PackageSourceMapping etkinleştirildi, şu kaynak(lar) değerlendirilmedi: Microsoft Visual Studio Offline Packages, nuget.org.",
+      "libraryId": "NUnit",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "'net8.0' için 'coverlet.collector (>= 6.0.0)' çözümlenemiyor. PackageSourceMapping etkinleştirildi, şu kaynak(lar) değerlendirilmedi: Microsoft Visual Studio Offline Packages, nuget.org.",
+      "libraryId": "coverlet.collector",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "'net8.0' için 'NUnit3TestAdapter (>= 4.5.0)' çözümlenemiyor. PackageSourceMapping etkinleştirildi, şu kaynak(lar) değerlendirilmedi: Microsoft Visual Studio Offline Packages, nuget.org.",
+      "libraryId": "NUnit3TestAdapter",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "'net8.0' için 'Newtonsoft.Json (>= 13.0.1)' çözümlenemiyor. PackageSourceMapping etkinleştirildi, şu kaynak(lar) değerlendirilmedi: Microsoft Visual Studio Offline Packages, nuget.org.",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1100",
+      "level": "Error",
+      "message": "'net8.0' için 'NuGet.Frameworks (>= 6.5.0)' çözümlenemiyor. PackageSourceMapping etkinleştirildi, şu kaynak(lar) değerlendirilmedi: Microsoft Visual Studio Offline Packages, nuget.org.",
+      "libraryId": "NuGet.Frameworks",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

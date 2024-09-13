@@ -1,0 +1,306 @@
+﻿using FontAwesome.Sharp;
+using Project.HR;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Project.Finance
+{
+    public partial class PurchaseTable : Form
+    {
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-91IMOEI\\SQLEXPRESS;Initial Catalog=DatabaseBMS;Integrated Security=True;Pooling=False;Encrypt=True;TrustServerCertificate=true");
+        public PurchaseTable()
+        {
+            InitializeComponent();
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Select * From Purchase", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                purchaseDataGridView.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Occured a Error While Datas Loading!", "Warning", MessageBoxButtons.OK);
+            }
+            
+        }
+
+        private void purchaseDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //getting ID of selected row
+            int index = e.RowIndex;
+            DataGridViewRow selectedRows = purchaseDataGridView.Rows[index];
+            tbRows.Text = selectedRows.Cells[0].Value.ToString();
+        }
+
+        private void deleteButton_Enter(object sender, EventArgs e)
+        {
+            deleteButton.BackColor = Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+        }
+
+        private void deleteButton_Leave(object sender, EventArgs e)
+        {
+            deleteButton.BackColor = Color.Red;
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            //this method is for deleting a selected row
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Delete Purchase where Id =" + tbRows.Text, con);
+            cmd.ExecuteNonQuery();
+
+            //this method is refresh the table
+            SqlCommand cmd2 = new SqlCommand("Select * From Purchase", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd2);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            purchaseDataGridView.DataSource = dt;
+
+            con.Close();
+            MessageBox.Show("Purchase Deleted Succesfully");
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Shows all datas
+                if (searchCb.SelectedItem.Equals("ALL DATAS"))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("Select * From Purchase", con);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    purchaseDataGridView.DataSource = dt;
+                    con.Close();
+                }
+
+                //fiter by id
+                if (searchCb.SelectedItem.Equals("ID"))
+                {
+                    con.Open();
+                    SqlCommand sqlCommand = new SqlCommand("Select * From Purchase Where Id LIKE @Id", con);
+                    sqlCommand.Parameters.AddWithValue("@Id", "%" + int.Parse(searchTb.Text) + "%");
+                    SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    purchaseDataGridView.DataSource = dt;
+                    con.Close();
+                }
+
+                //fiter by Product Name
+                if (searchCb.SelectedItem.Equals("PRODUCT"))
+                {
+                    con.Open();
+                    SqlCommand sqlCommand = new SqlCommand("Select * From Purchase Where Product LIKE @Product", con);
+                    sqlCommand.Parameters.AddWithValue("@Product", "%" + searchTb.Text + "%");
+                    SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    purchaseDataGridView.DataSource = dt;
+                    con.Close();
+                }
+
+                //Filter by Count
+                if (searchCb.SelectedItem.Equals("COUNT"))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("Select * From Purchase Where Count LIKE @Count", con);
+                    cmd.Parameters.AddWithValue("@Count", "%" + searchTb.Text + "%");
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    purchaseDataGridView.DataSource = dt;
+                    con.Close();
+                }
+
+                //fiter by Unit Price
+                if (searchCb.SelectedItem.Equals("UNIT PRICE"))
+                {
+                    con.Open();
+                    SqlCommand sqlCommand = new SqlCommand("Select * From Purchase Where Unitprice LIKE @Unitprice", con);
+                    sqlCommand.Parameters.AddWithValue("@Unitprice", "%" + searchTb.Text + "%");
+                    SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    purchaseDataGridView.DataSource = dt;
+                    con.Close();
+                }
+
+                //fiter by Total Price
+                if (searchCb.SelectedItem.Equals("TOTAL PRICE"))
+                {
+                    con.Open();
+                    SqlCommand sqlCommand = new SqlCommand("Select * From Purchase Where Totalprice LIKE @Totalprice", con);
+                    sqlCommand.Parameters.AddWithValue("@Totalprice", "%" + searchTb.Text + "%");
+                    SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    purchaseDataGridView.DataSource = dt;
+                    con.Close();
+                }
+
+                //Filter by Movement Location
+                if (searchCb.SelectedItem.Equals("MOVEMENT LOCATION"))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("Select * From Purchase Where Movementlocation LIKE @Movementlocation", con);
+                    cmd.Parameters.AddWithValue("@Movementlocation", "%" + searchTb.Text + "%");
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    purchaseDataGridView.DataSource = dt;
+                    con.Close();
+                }
+
+                //fiter by Arrival Location
+                if (searchCb.SelectedItem.Equals("ARRIVAL LOCATION"))
+                {
+                    con.Open();
+                    SqlCommand sqlCommand = new SqlCommand("Select * From Purchase Where Arrivallocation LIKE @Arrivallocation", con);
+                    sqlCommand.Parameters.AddWithValue("@Arrivallocation", "%" + searchTb.Text + "%");
+                    SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    purchaseDataGridView.DataSource = dt;
+                    con.Close();
+                }
+
+                //fiter by Customer Company
+                if (searchCb.SelectedItem.Equals("COMPANY"))
+                {
+                    con.Open();
+                    SqlCommand sqlCommand = new SqlCommand("Select * From Purchase Where Company LIKE @Company", con);
+                    sqlCommand.Parameters.AddWithValue("@Company", "%" + searchTb.Text + "%");
+                    SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    purchaseDataGridView.DataSource = dt;
+                    con.Close();
+                }
+
+                //Fiter by Company Number
+                if (searchCb.SelectedItem.Equals("COMPANY NUMBER"))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("Select * From Purchase Where Companynumber LIKE @Companynumber", con);
+                    cmd.Parameters.AddWithValue("@Companynumber", "%" + searchTb.Text + "%");
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    purchaseDataGridView.DataSource = dt;
+                    con.Close();
+                }
+
+                //fiter by Transporter Name
+                if (searchCb.SelectedItem.Equals("TRANPORTER NAME"))
+                {
+                    con.Open();
+                    SqlCommand sqlCommand = new SqlCommand("Select * From Purchase Where Transportername LIKE @Transportername", con);
+                    sqlCommand.Parameters.AddWithValue("@Transportername", "%" + searchTb.Text + "%");
+                    SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    purchaseDataGridView.DataSource = dt;
+                    con.Close();
+                }
+
+                //fiter by Transporter Number
+                if (searchCb.SelectedItem.Equals("TRANSPORTER NUMBER"))
+                {
+                    con.Open();
+                    SqlCommand sqlCommand = new SqlCommand("Select * From Purchase Where Transporternumber LIKE @Transporternumber", con);
+                    sqlCommand.Parameters.AddWithValue("@Transporternumber", "%" + searchTb.Text + "%");
+                    SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    purchaseDataGridView.DataSource = dt;
+                    con.Close();
+                }
+
+                //fiter by Transport Type
+                if (searchCb.SelectedItem.Equals("TRANSPORT TYPE"))
+                {
+                    con.Open();
+                    SqlCommand sqlCommand = new SqlCommand("Select * From Purchase Where Transporttype LIKE @Transporttype", con);
+                    sqlCommand.Parameters.AddWithValue("@Transporttype", "%" + searchTb.Text + "%");
+                    SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    purchaseDataGridView.DataSource = dt;
+                    con.Close();
+                }
+
+                //fiter by Transport Status
+                if (searchCb.SelectedItem.Equals("TRANSPORT STATUS"))
+                {
+                    con.Open();
+                    SqlCommand sqlCommand = new SqlCommand("Select * From Purchase Where Transportstatus LIKE @Transportstatus", con);
+                    sqlCommand.Parameters.AddWithValue("@Transportstatus", "%" + searchTb.Text + "%");
+                    SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    purchaseDataGridView.DataSource = dt;
+                    con.Close();
+                }
+
+                //fiter by Agreement Date
+                if (searchCb.SelectedItem.Equals("AGREEMENT DATE"))
+                {
+                    con.Open();
+                    SqlCommand sqlCommand = new SqlCommand("Select * From Purchase Where Agreementdate LIKE @Agreementdate", con);
+                    sqlCommand.Parameters.AddWithValue("@Agreementdate", "%" + searchTb.Text + "%");
+                    SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    purchaseDataGridView.DataSource = dt;
+                    con.Close();
+                }
+
+                //fiter by name
+                if (searchCb.SelectedItem.Equals("ESTIMATED DATE"))
+                {
+                    con.Open();
+                    SqlCommand sqlCommand = new SqlCommand("Select * From Purchase Where Estimateddate LIKE @Estimateddate", con);
+                    sqlCommand.Parameters.AddWithValue("@Estimateddate", "%" + searchTb.Text + "%");
+                    SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    purchaseDataGridView.DataSource = dt;
+                    con.Close();
+                }
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Occured a Error While Datas Searching!", "Warning", MessageBoxButtons.OK);
+            }
+        }
+
+        private void purchaseDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectedRows = purchaseDataGridView.Rows[index];
+            tbRows.Text = selectedRows.Cells[0].Value.ToString();
+
+            string id = tbRows.Text;
+
+            UpdatePurchase updatePurchase = new UpdatePurchase(id);
+            updatePurchase.Show();
+        }
+    }
+}

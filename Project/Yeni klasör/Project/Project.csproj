@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ABA507B5-83F2-4213-8C4D-864F6D6F1069}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Project</RootNamespace>
+    <AssemblyName>Project</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.9.0.0-preview.1.24080.9\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\TcVerification\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\FinanceLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\FinanceLogin.Designer.cs">
+      <DependentUpon>FinanceLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\FinancePanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\FinancePanel.Designer.cs">
+      <DependentUpon>FinancePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\GraphFinance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\GraphFinance.Designer.cs">
+      <DependentUpon>GraphFinance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\Payments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\Payments.Designer.cs">
+      <DependentUpon>Payments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\Purchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\Purchase.Designer.cs">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\PurchaseTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\PurchaseTable.Designer.cs">
+      <DependentUpon>PurchaseTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\Sale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\Sale.Designer.cs">
+      <DependentUpon>Sale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\SaleTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\SaleTable.Designer.cs">
+      <DependentUpon>SaleTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\UpdatePurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\UpdatePurchase.Designer.cs">
+      <DependentUpon>UpdatePurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\AllEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\AllEmployees.Designer.cs">
+      <DependentUpon>AllEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\CitizenVerification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\CitizenVerification.Designer.cs">
+      <DependentUpon>CitizenVerification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\Employees.cs" />
+    <Compile Include="HR\Graph.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\Graph.Designer.cs">
+      <DependentUpon>Graph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\HrLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\HrLogin.Designer.cs">
+      <DependentUpon>HrLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\HrPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\HrPanel.Designer.cs">
+      <DependentUpon>HrPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\NewEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\NewEmployee.Designer.cs">
+      <DependentUpon>NewEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HR\UpdateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HR\UpdateEmployee.Designer.cs">
+      <DependentUpon>UpdateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\ManagementLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\ManagementLogin.Designer.cs">
+      <DependentUpon>ManagementLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\ManagementPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Management\ManagementPanel.Designer.cs">
+      <DependentUpon>ManagementPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectDepartment.Designer.cs">
+      <DependentUpon>SelectDepartment.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Finance\FinanceLogin.resx">
+      <DependentUpon>FinanceLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\FinancePanel.resx">
+      <DependentUpon>FinancePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\GraphFinance.resx">
+      <DependentUpon>GraphFinance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\Payments.resx">
+      <DependentUpon>Payments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\Purchase.resx">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\PurchaseTable.resx">
+      <DependentUpon>PurchaseTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\Sale.resx">
+      <DependentUpon>Sale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\SaleTable.resx">
+      <DependentUpon>SaleTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\UpdatePurchase.resx">
+      <DependentUpon>UpdatePurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\AllEmployees.resx">
+      <DependentUpon>AllEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\CitizenVerification.resx">
+      <DependentUpon>CitizenVerification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\Graph.resx">
+      <DependentUpon>Graph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\HrLogin.resx">
+      <DependentUpon>HrLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\HrPanel.resx">
+      <DependentUpon>HrPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\NewEmployee.resx">
+      <DependentUpon>NewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HR\UpdateEmployee.resx">
+      <DependentUpon>UpdateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\ManagementLogin.resx">
+      <DependentUpon>ManagementLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\ManagementPanel.resx">
+      <DependentUpon>ManagementPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SelectDepartment.resx">
+      <DependentUpon>SelectDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\TcVerification\KPSPublic.wsdl" />
+    <None Include="Connected Services\TcVerification\Project.TcVerification.TCKimlikNoDogrulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dolphin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-cutout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2815428.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PERSON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-family-house-icon-home-icon-ios-11553392707bgapvjo9ic-cutout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-hamburger-button-computer-icons-marmon-keystone-canada-menu-red-sea-cutout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\input-onlinepngtools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\u-turn-cutout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %283%29-cutout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\TcVerification\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TcVerification\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TcVerification\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\TcVerification\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

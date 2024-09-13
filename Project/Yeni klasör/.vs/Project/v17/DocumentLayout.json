@@ -1,0 +1,76 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Cemalettin\\Desktop\\Csharp\\MezuniyetProjesi\\Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ABA507B5-83F2-4213-8C4D-864F6D6F1069}|Project\\Project.csproj|C:\\Users\\Cemalettin\\Desktop\\Csharp\\MezuniyetProjesi\\Project\\project\\finance\\financepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ABA507B5-83F2-4213-8C4D-864F6D6F1069}|Project\\Project.csproj|solutionrelative:project\\finance\\financepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABA507B5-83F2-4213-8C4D-864F6D6F1069}|Project\\Project.csproj|c:\\users\\cemalettin\\desktop\\csharp\\mezuniyetprojesi\\project\\project\\hr\\hrpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ABA507B5-83F2-4213-8C4D-864F6D6F1069}|Project\\Project.csproj|solutionrelative:project\\hr\\hrpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABA507B5-83F2-4213-8C4D-864F6D6F1069}|Project\\Project.csproj|c:\\users\\cemalettin\\desktop\\csharp\\mezuniyetprojesi\\project\\project\\management\\managementpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ABA507B5-83F2-4213-8C4D-864F6D6F1069}|Project\\Project.csproj|solutionrelative:project\\management\\managementpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 246,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ManagementPanel.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\Cemalettin\\Desktop\\Csharp\\MezuniyetProjesi\\Project\\Project\\Management\\ManagementPanel.cs",
+              "RelativeDocumentMoniker": "Project\\Management\\ManagementPanel.cs",
+              "ToolTip": "C:\\Users\\Cemalettin\\Desktop\\Csharp\\MezuniyetProjesi\\Project\\Project\\Management\\ManagementPanel.cs [Tasar\u0131m]",
+              "RelativeToolTip": "Project\\Management\\ManagementPanel.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-21T14:53:02.612Z",
+              "EditorCaption": " [Tasar\u0131m]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HrPanel.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\Cemalettin\\Desktop\\Csharp\\MezuniyetProjesi\\Project\\Project\\HR\\HrPanel.cs",
+              "RelativeDocumentMoniker": "Project\\HR\\HrPanel.cs",
+              "ToolTip": "C:\\Users\\Cemalettin\\Desktop\\Csharp\\MezuniyetProjesi\\Project\\Project\\HR\\HrPanel.cs [Tasar\u0131m]",
+              "RelativeToolTip": "Project\\HR\\HrPanel.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-21T14:47:45.107Z",
+              "EditorCaption": " [Tasar\u0131m]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FinancePanel.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\Cemalettin\\Desktop\\Csharp\\MezuniyetProjesi\\Project\\Project\\Finance\\FinancePanel.cs",
+              "RelativeDocumentMoniker": "Project\\Finance\\FinancePanel.cs",
+              "ToolTip": "C:\\Users\\Cemalettin\\Desktop\\Csharp\\MezuniyetProjesi\\Project\\Project\\Finance\\FinancePanel.cs [Tasar\u0131m]",
+              "RelativeToolTip": "Project\\Finance\\FinancePanel.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T18:34:58.366Z",
+              "EditorCaption": " [Tasar\u0131m]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
